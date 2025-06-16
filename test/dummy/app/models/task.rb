@@ -1,6 +1,6 @@
 class Task < ApplicationRecord
   validates :title, presence: true
-  enum status: {
+  enum :status, {
     todo: 0,
     pending: 1,
     in_progress: 2,
