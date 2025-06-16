@@ -1,0 +1,11 @@
+<%= form_with model: task do |t| %>
+  <%= task.errors.full_messages.to_sentence %>
+
+  <%= t.label :title %>
+  <%= t.text_field :title %>
+
+  <%= t.label :description %>
+  <%= t.text_field :description %>
+
+  <%= t.submit "Save" %>
+<% end %>
