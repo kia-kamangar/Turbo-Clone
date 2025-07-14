@@ -1,5 +1,12 @@
 <h1>Tasks</h1>
 
-<%= link_to "New Task", new_task_path %>
+<%= link_to "New Task", 
+            new_task_path,
+            data: { turbo_frame: dom_id(Task.new)} %>
 
-<%= render @tasks %>
+<%= turbo_frame_tag(Task.new) %>
+<%= turbo_stream_from :tasks %>
+
+<div id="tasks">
+    <%= render @tasks %>
+</div>

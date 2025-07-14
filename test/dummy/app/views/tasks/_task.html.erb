@@ -1,13 +1,15 @@
-<div> 
-  Task <%= "##{task.id}" %>
-  &bull;
-  <%= task.title %>
-  &bull;
-  <%= task.description %>
-  &bull;
-  <%= task.status %>
-  &bull;
-  <%= link_to "Edit", edit_task_path(task) %>
-  &bull;
-  <%= button_to "Delete", task_path(task), method: :delete, form: {style: "desplay: inline;"}%>
-</div>
+<%= turbo_frame_tag(task) do %>
+  <div> 
+    Task <%= "##{task.id}" %>
+    &bull;
+    <%= task.title %>
+    &bull;
+    <%= task.description %>
+    &bull;
+    <%= task.status %>
+    &bull;
+    <%= link_to "Edit", edit_task_path(task) %>
+    &bull;
+    <%= button_to "Delete", task_path(task), method: :delete, form: {style: "desplay: inline;"}%>
+  </div>
+<% end %>

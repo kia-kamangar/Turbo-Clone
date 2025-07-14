@@ -2,4 +2,6 @@
 
 <%= link_to "Back", tasks_path %>
 
-<%= render "tasks/form", task: @task %>
+<%= turbo_frame_tag(@task) do%>
+    <%= render "tasks/form", task: @task %>
+<% end %>
