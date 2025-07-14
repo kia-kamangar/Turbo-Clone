@@ -8,6 +8,7 @@ class Task < ApplicationRecord
     on_hold: 4,
     cancelled: 5,
     failed: 6,
-    reopened: 7,
+    reopened: 7
   }
+  broadcasts_to ->(task) { :tasks }, inserts_by: :append
 end
