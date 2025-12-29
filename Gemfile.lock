@@ -151,9 +151,10 @@ GEM
       activesupport (>= 7.0.0)
       rack
       railties (>= 7.0.0)
-    pry (0.15.2)
+    pry (0.16.0)
       coderay (~> 1.1)
       method_source (~> 1.0)
+      reline (>= 0.6.0)
     psych (5.2.6)
       date
       stringio
@@ -266,7 +267,7 @@ DEPENDENCIES
   hotwire-rails
   importmap-rails
   propshaft
-  pry (~> 0.15.0)
+  pry (~> 0.16.0)
   puma
   rubocop-rails-omakase
   sqlite3
